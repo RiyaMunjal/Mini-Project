@@ -1,6 +1,12 @@
 import express from "express"
+import cors from "cors"
 const app=express();
 
+app.use(cors({
+    origin:process.env.Frontend_URL,
+    method:["GET","POST","PUT","DELETE"],
+    credentials:true,
+}))
 
 app.get("/api/jokes", (req, res)=>{
     const jokes=[{
