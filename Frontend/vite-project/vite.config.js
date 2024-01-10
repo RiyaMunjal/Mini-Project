@@ -8,7 +8,7 @@ export default defineConfig({
   },
   server:{
     proxy:{
-      "/api":"https://mini-project-backend-sy6a.onrender.com/"
+      "/api":Backend_URL
     },
   },
   plugins: [react()],
